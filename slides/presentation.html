@@ -7,6 +7,7 @@
     <title>Curso ADS - Apresentação</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         .reveal {
             font-family: sans-serif;
@@ -183,6 +184,7 @@
                 </div>
             </section>
 
+            <!-- Slides Usabilidade -->
             <!-- Task 1: USABILIDADE -->
             <section>
                 <h2>TASK: USABILIDADE</h2>
@@ -190,7 +192,6 @@
                     <h3>Exibir alerta de confirmação ao tentar excluir um cliente</h3>
                 </div>
             </section>
-
             <!-- Task 1: Problema -->
             <section>
                 <h2>Qual foi o problema?</h2>
@@ -205,14 +206,35 @@
                         <h3>Impacto</h3>
                         <p>A falta de confirmação antes da exclusão de registros apresenta um grande risco para a
                             integridade dos dados em qualquer sistema. A implementação de um modal de confirmação
-                            melhoraria a experiência
-                            do usuário, e também serveria como uma salvaguarda contra exclusões acidentais, oque
+                            melhoraria a experiência do usuário, e também serveria como uma salvaguarda contra exclusões
+                            acidentais,
+                            oque
                             reduzeria a necessidade de recuperação de dados e mantendo de forma positiva
-                            a confiabilidade, a visão e a opinião do usuário para com o nosso sistema .</p>
+                            a confiabilidade, a visão e a opinião do usuário para com o nosso sistema.</p>
                     </div>
                 </div>
             </section>
-
+            <!-- Task 1: Como era antes - Título -->
+            <section>
+                <h3>Como era antes?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <!-- <h5 style="margin-bottom: 15px;">Tela Anterior</h5> -->
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Como era antes - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/usabilidade3.png" alt="imagem usabilidade 3" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Task 1: Explicação -->
             <section>
                 <h3>Explicação da Solução</h3>
@@ -225,220 +247,431 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Task 1: Solução (Parte 1) -->
+            <!-- Task 1: Solução (Parte 1) - Título -->
             <section>
-                <h3>Como foi resolvido? (Parte 1)</h3>
+                <h3>Como foi resolvido?</h3>
                 <div class="solution-container">
-                    <div class="code-section">
-                        <h5>JavaScript - Implementação</h5>
-                        <pre>
-                            <code class="language-javascript">
-                                // JavaScript
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    const deleteBtns = document.querySelectorAll('.btn-danger.btn-sm');
-                                    deleteBtns.forEach(btn => {
-                                        btn.setAttribute('data-bs-toggle', 'modal');
-                                        btn.setAttribute('data-bs-target', '#modalDelete');
-                                    });
-                                });
-
-                                function excluir() {
-                                    $('#modalDelete').modal('hide');
-                                    alert('Cliente Excluido com Sucesso!');
-                                }
-                            </code>
-                        </pre>
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -15px;">HTML - Modal de Confirmação</h5>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 1: Solução (Parte 2) -->
+            <!-- Task 1: Solução (Parte 1) - Imagem -->
             <section>
-                <h3>Como foi resolvido? (Parte 2)</h3>
-                <div class="solution-container">
-                    <div class="code-section">
-                        <h5>HTML - Modal de Confirmação</h5>
-                        <pre>
-                            <code class="language-html">
-                            <!-- HTML - Modal de Confirmação -->
-                                <div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                    aria-labelledby="modalDeleteLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="modalDeleteLabel">Exclusão de Cliente</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                            Deseja realmente excluir o cliente?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="button" class="btn btn-danger" onclick="excluir();">Excluir</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </code>
-                        </pre>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/usabilidadeHTML.png" alt="código usabilidade 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 1: Resultado -->
+            <!-- Task 1: Solução (Parte 2) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style=" margin-top: -10px;">javascript - Manipulação dos componentes do DOM</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Solução (Parte 2) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/usabilidadeJS.png" alt="código usabilidade 2" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Resultado - Título -->
             <section>
                 <h2>Qual o resultado?</h2>
                 <div class="results-container">
                     <div class="screenshots">
                         <h3>Tela 1</h3>
-                        <div class="screenshot-placeholder">
-                            <img src="./images/usabilidade1.png" alt="USABILIDADE IMAGE">
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Resultado - Imagem 1 -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/usabilidade1.png" alt="USABILIDADE IMAGE" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Task 1: Resultado - Título 2 -->
             <section>
                 <h2>Qual o resultado?</h2>
                 <div class="results-container">
                     <div class="screenshots">
                         <h3>Tela 2</h3>
-                        <div class="screenshot-placeholder">
-                            <img src="./images/usabilidade2.png" alt="USABILIDADE IMAGE">
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Resultado - Imagem 2 -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/usabilidade2.png" alt="USABILIDADE IMAGE" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Slides API -->
             <!-- Task 2: CONSUMO DE API -->
             <section>
                 <h2>TASK: CONSUMO DE API</h2>
                 <div class="task-intro">
-                    <h3>Integração com serviços externos</h3>
+                    <h3>Ao chegar na tela de login, abaixo do formulario, o usuário deverá ver o horário atual de duas
+                        cidades:
+                        Fortaleza e Nova York</h3>
                 </div>
             </section>
-
-            <!-- Task 2: Explicação -->
-            <section>
-                <h3>Explicação da Solução</h3>
-                <div class="solution-container">
-                    <div class="explanation">
-                        <h3>Implementação da API</h3>
-                        <p>Espaço para explicar a implementação da API</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- Task 2: Problema -->
             <section>
                 <h2>Qual foi o problema?</h2>
                 <div class="problem-container">
                     <div class="problem-description">
                         <h3>Descrição do Problema</h3>
-                        <p>Espaço para descrever o problema encontrado</p>
+                        <p>O usuário, por ser o representante comercial de uma grande multinacional que se localizava em
+                            New York, precisava ter conhecimento das datas das duas localidades</p>
                     </div>
                     <div class="problem-impact">
                         <h3>Impacto</h3>
-                        <p>Espaço para descrever o impacto do problema</p>
+                        <p>Com a integração ao serviço de api, foi possivel dar ao usuario a minima sensação de
+                            pertencimento
+                            ao ambiente americano.
+                        </p>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 2: Solução -->
+            <!-- Task 2: Como era antes - Título -->
+            <section>
+                <h3>Como era antes?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <!-- <h5 style="margin-bottom: 15px;">Tela Anterior</h5> -->
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Como era antes - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/api1.png" alt="imagem api 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação da API</h3>
+                        <p>Para resgatar as datas das duas regiões (Fortaleza e New York) foi realizado
+                            a integração com 2 endpoints de um serviço de api, o http://worldtimeapi.org.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 1) - Título -->
             <section>
                 <h3>Como foi resolvido?</h3>
                 <div class="solution-container">
-                    <div class="code-section">
-                        <h5>Código da Solução</h5>
-                        <pre><code class="language-javascript">
-// Espaço para o código da solução
-// Exemplo:
-function solucao() {
-    // Implementação
-}
-                        </code></pre>
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Função</h5>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 2: Resultado -->
+            <!-- Task 2: Solução (Parte 1) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1000px; margin-top: -140px;">
+                            <img src="./images/codigoapi1.png" alt="imagem codigo api 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 2) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style=" margin-top: -40px;">javascript - Função</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 2) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1000px; margin-top: -160px;">
+                            <img src="./images/codigoapi2.png" alt="imagem codigo api 2" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 3) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -30px;">javascript - Função</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 3) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%;  min-width: 830px; margin-top: -180px;">
+                            <img src="./images/codigoapi3.png" alt="imagem codigo api 3" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -30px;">HTML - Componente que contém a relação de horários</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 3) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%;  min-width: 930px; margin-top: -80px;">
+                            <img src="./images/codigoapi4.png" alt="imagem codigo api 4" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -30px;">CSS - Estilamento para o componente HTML</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 3) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%;  min-width: 800px; margin-top: -130px;">
+                            <img src="./images/codigoapi5.png" alt="imagem codigo api 5" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -30px;">CSS - Estilamento para o componente HTML</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Solução (Parte 3) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 85%;  min-width: 400px; margin-top: -130px;">
+                            <img src="./images/codigoapi6.png" alt="imagem codigo api 6" srcset=""
+                                style="width: 100%; height: 80%; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Resultado - Título -->
             <section>
                 <h2>Qual o resultado?</h2>
                 <div class="results-container">
                     <div class="screenshots">
                         <h3>Telas</h3>
-                        <div class="screenshot-placeholder">
-                            <p>Espaço para screenshots</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 2: Resultado - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/api2.png" alt="imagem api 2" srcset=""
+                                style="width: 500px; height: 400px; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Slides Lógica -->
             <!-- Task 3: LÓGICA -->
             <section>
                 <h2>TASK: LÓGICA</h2>
                 <div class="task-intro">
-                    <h3>Implementação de algoritmos e regras de negócio</h3>
+                    <h3>O sistema deve mostrar um relógio digital em tempo real no topo da página</h3>
                 </div>
             </section>
-
-            <!-- Task 3: Explicação -->
-            <section>
-                <h3>Explicação da Solução</h3>
-                <div class="solution-container">
-                    <div class="explanation">
-                        <h3>Implementação da Lógica</h3>
-                        <p>Espaço para explicar a implementação da lógica</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- Task 3: Problema -->
             <section>
                 <h2>Qual foi o problema?</h2>
                 <div class="problem-container">
                     <div class="problem-description">
                         <h3>Descrição do Problema</h3>
-                        <p>Espaço para descrever o problema encontrado</p>
+                        <p>O sistema não exibia o horário atual em sua interface, forçando o usuário a consultar a hora
+                            em
+                            outro local. Isso poderia levar a registros de tempo imprecisos para as atividades da loja.
+                        </p>
                     </div>
                     <div class="problem-impact">
                         <h3>Impacto</h3>
-                        <p>Espaço para descrever o impacto do problema</p>
+                        <p>A implementação de um relógio que fornece o horário atualizado a cada segundo oferece uma
+                            referência
+                            temporal constante, essencial para o registro preciso de transações e para um gerenciamento
+                            mais eficaz
+                            tanto do fluxo de caixa como outras atividades operacionais da loja.</p>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 3: Solução -->
+            <!-- Task 3: Como era antes - Título -->
             <section>
-                <h3>Como foi resolvido?</h3>
-                <div class="solution-container">
-                    <div class="code-section">
-                        <h5>Código da Solução</h5>
-                        <pre><code class="language-javascript">
-// Espaço para o código da solução
-// Exemplo:
-function solucao() {
-    // Implementação
-}
-                        </code></pre>
-                    </div>
-                </div>
+                <h2>Como era antes?</h2>
             </section>
-
-            <!-- Task 3: Resultado -->
+            <!-- Task 3: Como era antes - Imagem -->
             <section>
-                <h2>Qual o resultado?</h2>
-                <div class="results-container">
-                    <div class="screenshots">
-                        <h3>Telas</h3>
-                        <div class="screenshot-placeholder">
-                            <p>Espaço para screenshots</p>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/logica1.png" alt="imagem logica 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Task 3: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação da Lógica</h3>
+                        <uind>Utilizando 2 funções básicas em Javascript, uma para retornar o horário seguindo
+                            o formato HH:MM:SS, e uma outra para chamar esta primeira função de forma periódica (cada
+                            segundo). após
+                            isso foi adicionado ao DOM da página e linkado os arquivos html a este arquivo JS</ui>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 3: Solução -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -15px;">javascript - Funções</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Solução (Parte 1) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/logicaJS1.png" alt="código logica 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 3: Solução -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -15px;">javascript - Funções</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Solução (Parte 1) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/logicaJS2.png" alt="código logica 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -15px;">HTML - Componente que contém o horário</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 1: Solução (Parte 1) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/logicaJS3.png" alt="código logica 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 3: Resultado - Título -->
+            <section>
+                <h2>Qual o resultado?</h2>
+            </section>
+            <!-- Task 3: Resultado - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/logica2.png" alt="imagem logica 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Slides Design -->
             <!-- Task 4: DESIGN -->
             <section>
                 <h2>TASK: DESIGN</h2>
@@ -446,8 +679,6 @@ function solucao() {
                     <h3>Criar dashboard inicial com indicadores visuais</h3>
                 </div>
             </section>
-
-
             <!-- Task 4: Problema -->
             <section>
                 <h2>Qual foi o problema?</h2>
@@ -464,12 +695,31 @@ function solucao() {
                             dados/estatisticas com gráficos para a visualização de importantes informações que
                             o cliente deseja ter entendimento. com um dashboard, nosso sistema ficará mais robusto, terá
                             um design melhor e impressionará nossos atuais clientes e chamará a atenção de futuros
-                            clientes
-                        </p>
+                            clientes</p>
                     </div>
                 </div>
             </section>
-
+            <!-- Task 4: Como era antes - Título -->
+            <section>
+                <h3>Como era antes?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <!-- <h5 style="margin-bottom: 15px;">Tela Anterior</h5> -->
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Como era antes - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/design3.png" alt="imagem design 3" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Task 4: Explicação -->
             <section>
                 <h3>Explicação da Solução</h3>
@@ -478,247 +728,209 @@ function solucao() {
                         <h3>Implementação dos Gráficos</h3>
                         <p>Foi utilizado a biblioteca Chart.JS para a elaboração de gráficos de diferentes tipos (Barras
                             Horizontais, Barras Verticais, Pizza e etc), proporcionando uma visualização clara e
-                            interativa dos dados do sistema.</p>
+                            interativa dos
+                            dados do sistema.</p>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 4: Solução (Parte 1) -->
+            <!-- Task 4: Solução (Parte 1) - Título -->
             <section>
-                <h3>Como foi resolvido? (PARTE 1)</h3>
+                <h3>Como foi resolvido?</h3>
                 <div class="solution-container">
-                    <div class="code-section">
-                        <h5>HTML - Componentes dos Gráficos</h5>
-                        <pre>
-                            <code class="language-html">
-                                <!-- Charts Row 1 -->
-                                <div class="row mb-4">
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Total de Vendas do Mês</h5>
-                                                <canvas id="salesChart"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Produtos em Baixo Estoque</h5>
-                                                <canvas id="stockChart"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Quantidade de Clientes</h5>
-                                                <canvas id="clientsChart"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Charts Row 2 -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Vendas por Categoria</h5>
-                                                <div style="width: 40%; margin: 0 auto;">
-                                                    <canvas id="categoryChart"></canvas>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </code>
-                        </pre>
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -35px;">HTML - Componentes dos Gráficos - Parte 1</h5>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 4: Solução (Parte 2) -->
+            <!-- Task 4: Solução (Parte 1) - Imagem -->
             <section>
-                <h3>Como foi resolvido? (PARTE 2)</h3>
-                <div class="solution-container">
-                    <div class="code-section">
-                        <h5>JavaScript - Implementação dos Gráficos com CHART.JS</h5>
-                        <pre>
-                            <code class="language-javascript">
-                                // Dados de exemplo
-                                const salesData = {
-                                    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
-                                    datasets: [{
-                                        label: 'Vendas do Mês',
-                                        data: [12000, 19000, 15000, 25000],
-                                        fill: true,
-                                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                                        borderColor: 'rgba(54, 162, 235, 1)',
-                                        tension: 0.4
-                                    }]
-                                };
-    
-                                const stockData = {
-                                    labels: ['Ypióca', 'Jurubeba do Muido', 'Vodka', 'Sapupara'],
-                                    datasets: [{
-                                        label: 'Quantidade em Estoque',
-                                        data: [5, 3, 2, 4],
-                                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                                        borderColor: 'rgba(255, 99, 132, 1)',
-                                        borderWidth: 1
-                                    }]
-                                };
-    
-                                const clientsData = {
-                                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-                                    datasets: [{
-                                        label: 'Novos Clientes',
-                                        data: [12, 19, 15, 25, 22, 30],
-                                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                                        borderColor: 'rgba(75, 192, 192, 1)',
-                                        borderWidth: 1
-                                    }]
-                                };
-    
-                                const categoryData = {
-                                    labels: ['Cachaças', 'Vinhos', 'Destilados', 'Espumantes', 'Outros'],
-                                    datasets: [{
-                                        label: 'Vendas por Categoria',
-                                        data: [30000, 25000, 40000, 15000, 10000],
-                                        backgroundColor: [
-                                            'rgba(255, 99, 132, 0.5)',
-                                            'rgba(54, 162, 235, 0.5)',
-                                            'rgba(255, 206, 86, 0.5)',
-                                            'rgba(75, 192, 192, 0.5)',
-                                            'rgba(153, 102, 255, 0.5)'
-                                        ],
-                                        borderColor: [
-                                            'rgba(255, 99, 132, 1)',
-                                            'rgba(54, 162, 235, 1)',
-                                            'rgba(255, 206, 86, 1)',
-                                            'rgba(75, 192, 192, 1)',
-                                            'rgba(153, 102, 255, 1)'
-                                        ],
-                                        borderWidth: 1
-                                    }]
-                                };
-    
-                                // Configuração dos gráficos
-                                new Chart(document.getElementById('salesChart'), {
-                                    type: 'line',
-                                    data: salesData,
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Vendas do Mês'
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true
-                                            }
-                                        }
-                                    }
-                                });
-    
-                                new Chart(document.getElementById('stockChart'), {
-                                    type: 'bar',
-                                    data: stockData,
-                                    options: {
-                                        indexAxis: 'y',
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Produtos em Baixo Estoque'
-                                            }
-                                        },
-                                        scales: {
-                                            x: {
-                                                beginAtZero: true
-                                            }
-                                        }
-                                    }
-                                });
-    
-                                new Chart(document.getElementById('clientsChart'), {
-                                    type: 'bar',
-                                    data: clientsData,
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Quantidade de Clientes'
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true
-                                            }
-                                        }
-                                    }
-                                });
-    
-                                new Chart(document.getElementById('categoryChart'), {
-                                    type: 'pie',
-                                    data: categoryData,
-                                    options: {
-                                        responsive: true,
-                                        maintainAspectRatio: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Vendas por Categoria'
-                                            }
-                                        }
-                                    }
-                                });
-                            </code>
-                        </pre>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 80%; min-width: 800px; margin-top: -100px;">
+                            <img src="./images/designHTML1.png" alt="código design HTML" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
                     </div>
                 </div>
             </section>
-
-            <!-- Task 4: Resultado -->
+            <!-- Task 4: Solução (Parte 2) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -15px;">HTML - Componentes dos Gráficos - Parte 2</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 2) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/designHTML2.png" alt="código design HTML" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 3) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Implementação dos Gráficos CHART.JS - Parte 1</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 3) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 800px; margin-top: -160px;">
+                            <img src="./images/designJS1.png" alt="código design JavaScript" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 4) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Implementação dos Gráficos CHART.JS - Parte 2</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 4) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 800px; margin-top: -160px;">
+                            <img src="./images/designJS2.png" alt="código design JavaScript" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 5) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Implementação dos Gráficos CHART.JS - Parte 3</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 5) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 400px; margin-top: -160px;">
+                            <img src="./images/designJS3.png" alt="código design JavaScript" srcset=""
+                                style="width: 100%; height: 800px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 6) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Implementação dos Gráficos CHART.JS - Parte 4</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 6) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 700px; margin-top: -150px;">
+                            <img src="./images/designJS4.png" alt="código design JavaScript" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 7) - Título -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <h5 style="margin-top: -40px;">javascript - Implementação dos Gráficos CHART.JS - Parte 5</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Solução (Parte 7) - Imagem -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 800px; margin-top: -100px;">
+                            <img src="./images/designJS5.png" alt="código design JavaScript" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Resultado - Título -->
             <section>
                 <h2>Qual o resultado?</h2>
                 <div class="results-container">
                     <div class="screenshots">
                         <h3>Tela 1</h3>
-                        <div class="screenshot-placeholder">
-                            <img src="./images/design1.png" alt="IMAGEM - DESIGN 1">
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Resultado - Imagem 1 -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/design1.png" alt="IMAGEM - DESIGN 1" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Task 4: Resultado - Título 2 -->
             <section>
                 <h2>Qual o resultado?</h2>
                 <div class="results-container">
                     <div class="screenshots">
                         <h3>Tela 2</h3>
-                        <div class="screenshot-placeholder">
-                            <img src="./images/design2.png" alt="IMAGEM - DESIGN 2">
+                    </div>
+                </div>
+            </section>
+            <!-- Task 4: Resultado - Imagem 2 -->
+            <section>
+                <div class="solution-container"
+                    style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+                    <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                            <img src="./images/design2.png" alt="IMAGEM - DESIGN 2" srcset=""
+                                style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
                 </div>
             </section>
-
-
+            <!-- Slide Final -->
             <section>
                 <div class="team-member">
                     <h2>TASKS FINALIZADAS!</h2>
                     <h4>TRAGAM MAIS!</h4>
                 </div>
             </section>
-
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
     <script>
