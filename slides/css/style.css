@@ -1,0 +1,118 @@
+.reveal {
+    font-family: sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal p {
+    color: #000;
+}
+
+.team-member {
+    margin: 40px 0;
+}
+
+.tasks-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 90px auto;
+    max-width: 1200px;
+}
+
+.tasks-container h4 {
+    margin-left: 28px;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.tasks-container li {
+    font-size: 28px;
+}
+
+/* Task Introduction Styles */
+.task-intro {
+    font-size: 26px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.task-intro h3 {
+    font-size: 1.8em;
+    color: #000;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+/* Problem, Solution and Results Styles */
+.problem-container,
+.solution-container,
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.problem-description,
+.problem-impact,
+.code-section,
+.explanation,
+.screenshots,
+.video-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-description,
+.problem-impact,
+.explanation {
+    font-size: 22px;
+}
+
+.code-section pre {
+    background: #2d2d2d;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.code-section code {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.screenshots {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.screenshot-placeholder {
+    background: #e9ecef;
+    padding: 60px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 15px;
+    min-height: 300px;
+}
+
+.reveal h3 {
+    color: #000;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+/* Remove video section styles as they're no longer needed */
+.video-section,
+.video-placeholder {
+    display: none;
+}

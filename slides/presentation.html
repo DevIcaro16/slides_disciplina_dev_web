@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso ADS - Apresentação</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <style>
+        .reveal {
+            font-family: sans-serif;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal p {
+            color: #000;
+        }
+
+        .team-member {
+            margin: 40px 0;
+        }
+
+        .tasks-container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin: 90px auto;
+            max-width: 1200px;
+        }
+
+        .tasks-container h4 {
+            margin-left: 28px;
+            font-size: 1.2em;
+            color: #000;
+        }
+
+        .tasks-container li {
+            font-size: 28px;
+        }
+
+        /* Task Introduction Styles */
+        .task-intro {
+            font-size: 26px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .task-intro h3 {
+            font-size: 1.8em;
+            color: #000;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        /* Problem, Solution and Results Styles */
+        .problem-container,
+        .solution-container,
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-description,
+        .problem-impact,
+        .code-section,
+        .explanation,
+        .screenshots,
+        .video-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-description,
+        .problem-impact,
+        .explanation {
+            font-size: 22px;
+        }
+
+
+        .code-section pre {
+            background: #2d2d2d;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .code-section code {
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .screenshots {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .screenshot-placeholder {
+            background: #e9ecef;
+            padding: 60px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 15px;
+            min-height: 300px;
+        }
+
+        .reveal h3 {
+            color: #000;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Remove video section styles as they're no longer needed */
+        .video-section,
+        .video-placeholder {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Boas Vindas -->
+            <section>
+                <h2>Trabalho - Desenvolvimento WEB</h2>
+                <p>Olá, Cursos de Tecnologia da Estácio - Via Corpvs!</p>
+            </section>
+
+            <!-- Slide 2: Apresentação da Equipe -->
+            <section>
+                <h2>Integrantes da Equipe</h2>
+                <div class="team-member">
+                    <ul>
+                        <li>Ícaro Rebouças - 202403663295</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 3: Tópicos -->
+            <section>
+                <h2>TASKS</h2>
+                <div class="tasks-container">
+                    <div class="task-group">
+                        <h4>USABILIDADE</h4>
+                        <ul>
+                            <li>Exibir alerta de confirmação ao tentar excluir um cliente</li>
+                        </ul>
+                    </div>
+
+                    <div class="task-group">
+                        <h4>CONSUMO DE API</h4>
+                        <ul>
+                            <li>Integração com serviços externos</li>
+                        </ul>
+                    </div>
+
+                    <div class="task-group">
+                        <h4>LÓGICA</h4>
+                        <ul>
+                            <li>Implementação de algoritmos e regras de negócio</li>
+                        </ul>
+                    </div>
+
+                    <div class="task-group">
+                        <h4>DESIGN</h4>
+                        <ul>
+                            <li>Criar dashboard inicial com indicadores visuais</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: USABILIDADE -->
+            <section>
+                <h2>TASK: USABILIDADE</h2>
+                <div class="task-intro">
+                    <h3>Exibir alerta de confirmação ao tentar excluir um cliente</h3>
+                </div>
+            </section>
+
+            <!-- Task 1: Problema -->
+            <section>
+                <h2>Qual foi o problema?</h2>
+                <div class="problem-container">
+                    <div class="problem-description">
+                        <h3>Descrição do Problema</h3>
+                        <p>Na tela de Clientes, ao clicar no botão "Excluir", o registro era removido imediatamente. O
+                            correto seria ter uma confirmação para evitar que o usuário excluisse o cliente de forma
+                            acidental.</p>
+                    </div>
+                    <div class="problem-impact">
+                        <h3>Impacto</h3>
+                        <p>A falta de confirmação antes da exclusão de registros apresenta um grande risco para a
+                            integridade dos dados em qualquer sistema. A implementação de um modal de confirmação
+                            melhoraria a experiência
+                            do usuário, e também serveria como uma salvaguarda contra exclusões acidentais, oque
+                            reduzeria a necessidade de recuperação de dados e mantendo de forma positiva
+                            a confiabilidade, a visão e a opinião do usuário para com o nosso sistema .</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação do Modal de Confirmação de Exclusão</h3>
+                        <p>Foi implementado um modal de confirmação de exclusão utilizando o framework frontend
+                            Bootstrap 5 para melhorar a usabilidade do sistema, evitando exclusões acidentais de
+                            registros.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: Solução (Parte 1) -->
+            <section>
+                <h3>Como foi resolvido? (Parte 1)</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>JavaScript - Implementação</h5>
+                        <pre>
+                            <code class="language-javascript">
+                                // JavaScript
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const deleteBtns = document.querySelectorAll('.btn-danger.btn-sm');
+                                    deleteBtns.forEach(btn => {
+                                        btn.setAttribute('data-bs-toggle', 'modal');
+                                        btn.setAttribute('data-bs-target', '#modalDelete');
+                                    });
+                                });
+
+                                function excluir() {
+                                    $('#modalDelete').modal('hide');
+                                    alert('Cliente Excluido com Sucesso!');
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: Solução (Parte 2) -->
+            <section>
+                <h3>Como foi resolvido? (Parte 2)</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>HTML - Modal de Confirmação</h5>
+                        <pre>
+                            <code class="language-html">
+                            <!-- HTML - Modal de Confirmação -->
+                                <div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                    aria-labelledby="modalDeleteLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="modalDeleteLabel">Exclusão de Cliente</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Deseja realmente excluir o cliente?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn btn-danger" onclick="excluir();">Excluir</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: Resultado -->
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Tela 1</h3>
+                        <div class="screenshot-placeholder">
+                            <img src="./images/usabilidade1.png" alt="USABILIDADE IMAGE">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Tela 2</h3>
+                        <div class="screenshot-placeholder">
+                            <img src="./images/usabilidade2.png" alt="USABILIDADE IMAGE">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 2: CONSUMO DE API -->
+            <section>
+                <h2>TASK: CONSUMO DE API</h2>
+                <div class="task-intro">
+                    <h3>Integração com serviços externos</h3>
+                </div>
+            </section>
+
+            <!-- Task 2: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação da API</h3>
+                        <p>Espaço para explicar a implementação da API</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 2: Problema -->
+            <section>
+                <h2>Qual foi o problema?</h2>
+                <div class="problem-container">
+                    <div class="problem-description">
+                        <h3>Descrição do Problema</h3>
+                        <p>Espaço para descrever o problema encontrado</p>
+                    </div>
+                    <div class="problem-impact">
+                        <h3>Impacto</h3>
+                        <p>Espaço para descrever o impacto do problema</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 2: Solução -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>Código da Solução</h5>
+                        <pre><code class="language-javascript">
+// Espaço para o código da solução
+// Exemplo:
+function solucao() {
+    // Implementação
+}
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 2: Resultado -->
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Telas</h3>
+                        <div class="screenshot-placeholder">
+                            <p>Espaço para screenshots</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: LÓGICA -->
+            <section>
+                <h2>TASK: LÓGICA</h2>
+                <div class="task-intro">
+                    <h3>Implementação de algoritmos e regras de negócio</h3>
+                </div>
+            </section>
+
+            <!-- Task 3: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação da Lógica</h3>
+                        <p>Espaço para explicar a implementação da lógica</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: Problema -->
+            <section>
+                <h2>Qual foi o problema?</h2>
+                <div class="problem-container">
+                    <div class="problem-description">
+                        <h3>Descrição do Problema</h3>
+                        <p>Espaço para descrever o problema encontrado</p>
+                    </div>
+                    <div class="problem-impact">
+                        <h3>Impacto</h3>
+                        <p>Espaço para descrever o impacto do problema</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: Solução -->
+            <section>
+                <h3>Como foi resolvido?</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>Código da Solução</h5>
+                        <pre><code class="language-javascript">
+// Espaço para o código da solução
+// Exemplo:
+function solucao() {
+    // Implementação
+}
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: Resultado -->
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Telas</h3>
+                        <div class="screenshot-placeholder">
+                            <p>Espaço para screenshots</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 4: DESIGN -->
+            <section>
+                <h2>TASK: DESIGN</h2>
+                <div class="task-intro">
+                    <h3>Criar dashboard inicial com indicadores visuais</h3>
+                </div>
+            </section>
+
+
+            <!-- Task 4: Problema -->
+            <section>
+                <h2>Qual foi o problema?</h2>
+                <div class="problem-container">
+                    <div class="problem-description">
+                        <h3>Descrição do Problema</h3>
+                        <p>O sistema não apresenta um painel na tela inicial descrevendo os principais números a
+                            respeito de: total de vendas do mês, produtos em baixo estoque, quantidade de clientes,
+                            etc.</p>
+                    </div>
+                    <div class="problem-impact">
+                        <h3>Impacto</h3>
+                        <p>A maior parte de grandes sistemas possuem uma parte destinada a apresentação de
+                            dados/estatisticas com gráficos para a visualização de importantes informações que
+                            o cliente deseja ter entendimento. com um dashboard, nosso sistema ficará mais robusto, terá
+                            um design melhor e impressionará nossos atuais clientes e chamará a atenção de futuros
+                            clientes
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 4: Explicação -->
+            <section>
+                <h3>Explicação da Solução</h3>
+                <div class="solution-container">
+                    <div class="explanation">
+                        <h3>Implementação dos Gráficos</h3>
+                        <p>Foi utilizado a biblioteca Chart.JS para a elaboração de gráficos de diferentes tipos (Barras
+                            Horizontais, Barras Verticais, Pizza e etc), proporcionando uma visualização clara e
+                            interativa dos dados do sistema.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 4: Solução (Parte 1) -->
+            <section>
+                <h3>Como foi resolvido? (PARTE 1)</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>HTML - Componentes dos Gráficos</h5>
+                        <pre>
+                            <code class="language-html">
+                                <!-- Charts Row 1 -->
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Total de Vendas do Mês</h5>
+                                                <canvas id="salesChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Produtos em Baixo Estoque</h5>
+                                                <canvas id="stockChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Quantidade de Clientes</h5>
+                                                <canvas id="clientsChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Charts Row 2 -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Vendas por Categoria</h5>
+                                                <div style="width: 40%; margin: 0 auto;">
+                                                    <canvas id="categoryChart"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 4: Solução (Parte 2) -->
+            <section>
+                <h3>Como foi resolvido? (PARTE 2)</h3>
+                <div class="solution-container">
+                    <div class="code-section">
+                        <h5>JavaScript - Implementação dos Gráficos com CHART.JS</h5>
+                        <pre>
+                            <code class="language-javascript">
+                                // Dados de exemplo
+                                const salesData = {
+                                    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                                    datasets: [{
+                                        label: 'Vendas do Mês',
+                                        data: [12000, 19000, 15000, 25000],
+                                        fill: true,
+                                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                        borderColor: 'rgba(54, 162, 235, 1)',
+                                        tension: 0.4
+                                    }]
+                                };
+    
+                                const stockData = {
+                                    labels: ['Ypióca', 'Jurubeba do Muido', 'Vodka', 'Sapupara'],
+                                    datasets: [{
+                                        label: 'Quantidade em Estoque',
+                                        data: [5, 3, 2, 4],
+                                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                        borderColor: 'rgba(255, 99, 132, 1)',
+                                        borderWidth: 1
+                                    }]
+                                };
+    
+                                const clientsData = {
+                                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                                    datasets: [{
+                                        label: 'Novos Clientes',
+                                        data: [12, 19, 15, 25, 22, 30],
+                                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                                        borderColor: 'rgba(75, 192, 192, 1)',
+                                        borderWidth: 1
+                                    }]
+                                };
+    
+                                const categoryData = {
+                                    labels: ['Cachaças', 'Vinhos', 'Destilados', 'Espumantes', 'Outros'],
+                                    datasets: [{
+                                        label: 'Vendas por Categoria',
+                                        data: [30000, 25000, 40000, 15000, 10000],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.5)',
+                                            'rgba(54, 162, 235, 0.5)',
+                                            'rgba(255, 206, 86, 0.5)',
+                                            'rgba(75, 192, 192, 0.5)',
+                                            'rgba(153, 102, 255, 0.5)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                };
+    
+                                // Configuração dos gráficos
+                                new Chart(document.getElementById('salesChart'), {
+                                    type: 'line',
+                                    data: salesData,
+                                    options: {
+                                        responsive: true,
+                                        plugins: {
+                                            title: {
+                                                display: true,
+                                                text: 'Vendas do Mês'
+                                            }
+                                        },
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+    
+                                new Chart(document.getElementById('stockChart'), {
+                                    type: 'bar',
+                                    data: stockData,
+                                    options: {
+                                        indexAxis: 'y',
+                                        responsive: true,
+                                        plugins: {
+                                            title: {
+                                                display: true,
+                                                text: 'Produtos em Baixo Estoque'
+                                            }
+                                        },
+                                        scales: {
+                                            x: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+    
+                                new Chart(document.getElementById('clientsChart'), {
+                                    type: 'bar',
+                                    data: clientsData,
+                                    options: {
+                                        responsive: true,
+                                        plugins: {
+                                            title: {
+                                                display: true,
+                                                text: 'Quantidade de Clientes'
+                                            }
+                                        },
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+    
+                                new Chart(document.getElementById('categoryChart'), {
+                                    type: 'pie',
+                                    data: categoryData,
+                                    options: {
+                                        responsive: true,
+                                        maintainAspectRatio: true,
+                                        plugins: {
+                                            title: {
+                                                display: true,
+                                                text: 'Vendas por Categoria'
+                                            }
+                                        }
+                                    }
+                                });
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 4: Resultado -->
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Tela 1</h3>
+                        <div class="screenshot-placeholder">
+                            <img src="./images/design1.png" alt="IMAGEM - DESIGN 1">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Qual o resultado?</h2>
+                <div class="results-container">
+                    <div class="screenshots">
+                        <h3>Tela 2</h3>
+                        <div class="screenshot-placeholder">
+                            <img src="./images/design2.png" alt="IMAGEM - DESIGN 2">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="team-member">
+                    <h2>TASKS FINALIZADAS!</h2>
+                    <h4>TRAGAM MAIS!</h4>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide',
+            plugins: [RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>

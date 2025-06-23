@@ -1,0 +1,142 @@
+<!-- Task 3: LÓGICA -->
+<section>
+    <h2>TASK: LÓGICA</h2>
+    <div class="task-intro">
+        <h3>O sistema deve mostrar um relógio digital em tempo real no topo da página</h3>
+    </div>
+</section>
+
+<!-- Task 3: Problema -->
+<section>
+    <h2>Qual foi o problema?</h2>
+    <div class="problem-container">
+        <div class="problem-description">
+            <h3>Descrição do Problema</h3>
+            <p>O sistema não exibia o horário atual em sua interface, forçando o usuário a consultar a hora em
+                outro local. Isso poderia levar a registros de tempo imprecisos para as atividades da loja.</p>
+        </div>
+        <div class="problem-impact">
+            <h3>Impacto</h3>
+            <p>A implementação de um relógio que fornece o horário atualizado a cada segundo oferece uma referência
+                temporal constante, essencial para o registro preciso de transações e para um gerenciamento mais eficaz
+                tanto do fluxo de caixa como outras atividades operacionais da loja.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Task 3: Como era antes - Título -->
+<section>
+    <h2>Como era antes?</h2>
+</section>
+
+<!-- Task 3: Como era antes - Imagem -->
+<section>
+    <div class="solution-container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                <img src="./images/logica1.png" alt="imagem logica 1" srcset=""
+                    style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Task 3: Explicação -->
+<section>
+    <h3>Explicação da Solução</h3>
+    <div class="solution-container">
+        <div class="explanation">
+            <h3>Implementação da Lógica</h3>
+            <uind>Utilizando 2 funções básicas em Javascript, uma para retornar o horário seguindo
+                o formato HH:MM:SS, e uma outra para chamar esta primeira função de forma periódica (cada segundo). após
+                isso foi adicionado ao DOM da página e linkado os arquivos html a este arquivo JS</ui>
+        </div>
+    </div>
+</section>
+
+<!-- Task 3: Solução -->
+<section>
+    <h3>Como foi resolvido?</h3>
+    <div class="solution-container">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <h5 style="margin-top: -15px;">javascript - Funções</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Task 1: Solução (Parte 1) - Imagem -->
+<section>
+    <div class="solution-container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                <img src="./images/logicaJS1.png" alt="código logica 1" srcset=""
+                    style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Task 3: Solução -->
+<section>
+    <h3>Como foi resolvido?</h3>
+    <div class="solution-container">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <h5 style="margin-top: -15px;">javascript - Funções</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Task 1: Solução (Parte 1) - Imagem -->
+<section>
+    <div class="solution-container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                <img src="./images/logicaJS2.png" alt="código logica 1" srcset=""
+                    style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Como foi resolvido?</h3>
+    <div class="solution-container">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <h5 style="margin-top: -15px;">HTML - Componente que contém o horário</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Task 1: Solução (Parte 1) - Imagem -->
+<section>
+    <div class="solution-container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                <img src="./images/logicaJS3.png" alt="código logica 1" srcset=""
+                    style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Task 3: Resultado - Título -->
+<section>
+    <h2>Qual o resultado?</h2>
+</section>
+
+<!-- Task 3: Resultado - Imagem -->
+<section>
+    <div class="solution-container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="code-section" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="screenshot-placeholder" style="width: 100%; min-width: 1200px; margin-top: -100px;">
+                <img src="./images/logica2.png" alt="imagem logica 1" srcset=""
+                    style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
